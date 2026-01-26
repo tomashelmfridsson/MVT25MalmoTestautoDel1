@@ -16,24 +16,22 @@ public class Division {
             try {
                 if (!numeratorOK) {
                     System.out.print("Skriv in täljare: ");
-                    numerator = myScan.nextInt();
+                    numerator = Integer.parseInt(myScan.nextLine());
                     numeratorOK = true;
                 }
-            } catch (InputMismatchException ime) {
-                System.out.println("Du angav ett fel täljare");
-                numeratorOK = false;
+            } catch (NumberFormatException nfe){
+                System.out.println("Inget heltal i täljaren");
             }
             try {
                 if (!denominatorOK) {
                     System.out.print("Skriv in nämnare: ");
-                    denominator = myScan.nextInt();
+                    denominator = Integer.parseInt(myScan.nextLine());
                     denominatorOK = true;
                 }
-            } catch (InputMismatchException ime){
+            } catch (NumberFormatException ime){
                 System.out.println("Du angav fel nämnare: ");
                 denominatorOK = false;
             }
-            myScan.nextLine();
         }
         double qoutient = (double) numerator / denominator;
         System.out.printf("Kvoten blir: " + qoutient);
