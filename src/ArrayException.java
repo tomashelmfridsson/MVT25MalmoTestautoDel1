@@ -12,8 +12,10 @@ public class ArrayException {
             Scanner myScan = new Scanner(System.in);
             int index = myScan.nextInt();
             System.out.println(names[index]);
-        } catch(Exception exception){
-            System.out.println(exception.getMessage());
+        } catch(ArrayIndexOutOfBoundsException e){
+            System.out.println("Du angav ett felaktigt index");
+        } catch( Exception e){
+            e.printStackTrace();
         }
     }
 }

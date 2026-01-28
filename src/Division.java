@@ -12,7 +12,6 @@ public class Division {
         boolean numeratorOK= false;
         boolean denominatorOK = false;
         while (!numeratorOK || !denominatorOK) {
-
             try {
                 if (!numeratorOK) {
                     System.out.print("Skriv in täljare: ");
@@ -33,9 +32,9 @@ public class Division {
                 System.out.println("Du angav fel nämnare: ");
                 denominatorOK = false;
             }
-            myScan.nextLine();
+            while(myScan.hasNext()) myScan.nextLine();
         }
-        double qoutient = (double) numerator / denominator;
-        System.out.printf("Kvoten blir: " + qoutient);
+        //double qoutient = (double) numerator / denominator;
+        System.out.println("Kvoten blir: " + numerator / denominator);
     }
 }
