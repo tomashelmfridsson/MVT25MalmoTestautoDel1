@@ -2,7 +2,11 @@ package vehicle;
 
 public class Bicycle extends Vehicle {
     // Klass Attribut
-    public int currentGear, maxGear, force;
+    private int currentGear, maxGear, force;
+
+    public int currentGear(){
+        return currentGear;
+    }
 
     // Hur många växlar den har
     public Bicycle(int nbr) {
